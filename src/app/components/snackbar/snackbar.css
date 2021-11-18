@@ -1,0 +1,27 @@
+.snackBar {
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    left: calc(50vw - 150px);
+    min-height: 30px;
+    line-height: 18px;
+    padding: 10px 5px 10px 5px;
+    position: fixed;
+    text-align: center;
+    top: 70px;
+    width: 300px;
+    z-index: 9000;
+    color: #fff;
+}
+
+.success {
+  background-color: #6CB91D;
+}
+
+.error {
+  background-color: #FF8964;
+}
+
+.warning {
+  background-color: #eb415d;
+}

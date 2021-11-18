@@ -1,0 +1,38 @@
+
+.sidenav-container {
+  width: 100%;
+  height: 100%;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.product-title {
+  border-left: 5px solid #0074ff;
+    padding: 6px 16px;
+}
+.title {
+  vertical-align: super;
+  padding-left: 10px;
+}
+
+.link {
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 2rem;
+  padding-bottom: 0.125rem;
+}
+.tab-container {
+  padding: 1rem;
+}
+.active {
+  border-bottom: 0.2rem solid #0074ff;
+  color: black;
+  border-radius: 0.1rem;
+}
+.active-tab {
+  border-bottom: 2px solid #0074ff;
+  color: #303030;
+  border-radius: 2px;
+}

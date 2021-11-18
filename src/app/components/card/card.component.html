@@ -1,0 +1,14 @@
+<mat-card class="card">
+  <mat-card-title-group>
+    <mat-card-title>{{movie.movieName}}</mat-card-title>
+    <mat-card-subtitle>Director: {{movie.director}}</mat-card-subtitle>
+    <img mat-card-sm-image src="../../../assets/movie.png">
+  </mat-card-title-group>
+  <mat-card-content>
+    {{movie.producer}}
+  </mat-card-content>
+  <mat-card-actions>
+    <span>Created Date: {{movie.created | date}}</span>
+    <label class="edited">Edited Date: {{movie.edited | date}}</label>
+  </mat-card-actions>
+</mat-card>

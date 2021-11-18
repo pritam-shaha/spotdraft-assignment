@@ -1,0 +1,26 @@
+.fav-movie-list-container {
+  padding: 1rem;
+  height: calc(100% - 85px);
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.align-center {
+  font-size: 1.3rem;
+  background: #fafbfc;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.info{
+  color: #999996;
+  font-size: 1rem;
+}

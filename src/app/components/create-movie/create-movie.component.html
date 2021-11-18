@@ -1,0 +1,40 @@
+<div class="create-bg">
+  <div class="overlay-modal">
+    <div class="fixed-header">
+      <div class="zui-boldheader">{{labels.CREATE_MOVIE}}</div>
+    </div>
+    <div class="create-movie-container">
+      <form [formGroup]="createMovieFormGroup">
+        <div class="config">
+          <div class="zheader">Movie Name<span class="red-color"> *</span></div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Movie Name</mat-label>
+            <input type="text" matInput formControlName="movieName">
+            <mat-error *ngIf="createMovieFormGroup.hasError('required')">
+              Movie name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <div class="zheader">Director Name<span class="red-color"> *</span></div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Director Name</mat-label>
+            <input type="text" matInput formControlName="director">
+            <mat-error *ngIf="createMovieFormGroup.hasError('required')">
+              Director name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <div class="zheader">Producer Name<span class="red-color"> *</span></div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Producer Name</mat-label>
+            <input type="text" matInput formControlName="producer">
+            <mat-error *ngIf="createMovieFormGroup.hasError('required')">
+              Producer name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <button class="btn cancle" (click)="onCreateClose.emit(false)">{{labels.CANCLE}}</button>
+      <button [disabled]="!createMovieFormGroup.valid" class="btn" (click)="createMovie()">{{labels.CREATE_MOVIE}}</button>
+    </footer>
+  </div>

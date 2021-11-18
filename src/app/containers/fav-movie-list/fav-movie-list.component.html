@@ -1,0 +1,17 @@
+<ng-container *ngIf="{
+  loading: loading$ | async,
+  favMovies: favMovies$ | async
+} as data">
+  <section class="fav-movie-list-container">
+    <div class="card-container" *ngIf="data?.favMovies?.length; else noContent">
+      <ng-container *ngFor="let fM of data?.favMovies">
+        <app-card-movie [movie]="fM"></app-card-movie>
+      </ng-container>
+    </div>
+    <ng-template #noContent>
+      <div class="align-center">
+        <div class="info">{{labels.NO_FAV_MOVIE}}</div>
+      </div>
+    </ng-template>
+  </section>
+</ng-container>

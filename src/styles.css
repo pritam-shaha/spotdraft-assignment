@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-drawer-inner-container {
+background: #04173F !important;
+padding-top: 3rem;
+color: white;
+}
+.mat-toolbar-single-row {
+background: deepskyblue !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+background-color: transparent;
+width: 400px;
+}

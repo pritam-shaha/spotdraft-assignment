@@ -1,0 +1,32 @@
+<ng-container *ngIf="{
+  loading: loading$ | async,
+  searchText: searchText$ | async,
+  totalCount: totalCount$ | async,
+  error: error$ | async,
+  movies: movies$ | async,
+  showCreateMovie: showCreateMovie$ | async
+} as data">
+  <div *ngIf="data?.loading" class="align-center">{{labels.LOADING}}</div>
+  <app-snackbar class="snackBar" *ngIf="data?.error" [msg]="data?.error" [type]="'error'"></app-snackbar>
+  <section class="movie-list-container" *ngIf="!data?.loading && !data?.error">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>{{labels.SEARCH_MOVIE}}</mat-label>
+      <input matInput type="text" [(ngModel)]="data.searchText" (ngModelChange)="onSearchTextChange($event)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button class="add-movie" (click)="showCreateMovie$.next(true);">{{labels.ADD_MOVIE}}</button>
+    <ng-container *ngIf="data?.movies && data?.totalCount; else noContent">
+      <div class="movie-count">{{labels.TOTAL_MOVIES}}<span class="count">{{data?.totalCount}}</span></div>
+      <section>
+        <app-movie-list-table [movies]="data?.movies"></app-movie-list-table>
+      </section>
+    </ng-container>
+    <ng-template #noContent>
+      <div class="align-center">
+        <div class="info">{{labels.NO_DATA}}</div>
+      </div>
+    </ng-template>
+  </section>
+  <app-create-movie *ngIf="data?.showCreateMovie" [createMovieFormGroup]="createMovieForm"
+    (onCreateClose)="showCreateMovie$.next(false)" (onCreateMovie)="createMovie()"></app-create-movie>
+</ng-container>

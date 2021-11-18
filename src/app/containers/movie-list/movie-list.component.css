@@ -1,0 +1,37 @@
+.movie-list-container {
+  padding: 1rem;
+  height: calc(100% - 85px);
+}
+.add-movie{
+  border: 0px;
+  background: #0074ff;
+  border-radius: 4px;
+  padding: 1rem 0.5rem;
+  float: right;
+  color: white;
+}
+.movie-count {
+  padding-bottom: 1rem;
+  color: gray;
+  text-align: right;
+}
+.count {
+  font-weight: 500;
+}
+.align-center {
+  font-size: 1.3rem;
+  background: #fafbfc;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.info{
+  color: #999996;
+  font-size: 1rem;
+}
